@@ -1,0 +1,10 @@
+<% cache @album do %>
+  <h1><%= @album.title %> <em>by <%= @album.artist %></h1>
+  <%= @album.summary %>
+<% end %>
+
+<%= link_to "Back", albums_path %>
+<% if authenticated? %>
+  <%= link_to "Edit", edit_album_path(@album) %>
+  <%= button_to "Delete", @album, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+<% end %>

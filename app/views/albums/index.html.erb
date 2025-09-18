@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+
+<p><%= link_to "New Album", new_album_path if authenticated? %></p>
+
+<div>
+  <% @albums.each do |album| %>
+    <div>
+      <%= link_to album.title, album %> <em>by <%= album.artist %></em>
+      
+    </div>
+  <% end %>
+</div>
