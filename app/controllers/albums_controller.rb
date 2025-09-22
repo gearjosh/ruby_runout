@@ -44,6 +44,6 @@ class AlbumsController < ApplicationController
   end
 
   def album_params
-    params.expect(album: [ :title, :artist, :summary ])
+    params.expect(album: [ :title, :artist, :summary, :cover ])
   end
 end

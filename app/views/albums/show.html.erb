@@ -1,6 +1,7 @@
 <% cache @album do %>
   <h1><%= @album.title %> <em>by <%= @album.artist %></h1>
   <%= @album.summary %>
+  <%= image_tag @album.cover if @album.cover.attached? %>
 <% end %>
 
 <%= link_to "Back", albums_path %>
